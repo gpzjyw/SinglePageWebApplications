@@ -1,0 +1,22 @@
+/* 聊天界面,使用定宽+自适应布局 */
+.spa-shell-main .chat {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	bottom: 20px;
+	right: 20px;
+	overflow: hidden;
+}
+.spa-shell-main .chat .list {
+	float: left;
+	width: 220px;
+	background-color: #FFFFFF;
+	padding-bottom: 9999px;
+	margin-bottom: -9999px;
+}
+.spa-shell-main .chat .content {
+	margin-left: 240px;
+	background-color: #FFFFFF;
+	padding-bottom: 9999px;
+	margin-bottom: -9999px;
+}

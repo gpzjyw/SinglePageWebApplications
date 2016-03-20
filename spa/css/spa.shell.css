@@ -1,0 +1,42 @@
+#spa {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	min-width: 400px;
+}
+/* head部分 */
+.spa-shell-head {
+	display: flex;
+	flex-flow: row nowrap;
+	height: 80px;
+}
+.spa-shell-head a {
+	flex-grow: 1;
+	background-color: #FFA500;
+}
+.spa-shell-head .selected {
+	background-color: #EEEEEE;
+}
+.spa-shell-head a h2 {
+	text-align: center;
+}
+/* main内容部分 */
+.spa-shell-main {
+	position: absolute;
+	top: 80px;
+	right: 0;
+	bottom: 50px;
+	left: 0;
+	background-color: #EEEEEE;
+}
+/* foot部分 */
+.spa-shell-foot {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 50px;
+	background-color: #777777;
+}

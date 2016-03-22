@@ -14,6 +14,17 @@
 	padding-bottom: 9999px;
 	margin-bottom: -9999px;
 }
+.spa-shell-main .chat .list > div {
+	height: 48px;
+	margin-bottom: 5px;
+	text-align: center;
+	line-height: 48px;
+	background-color: #D1DFDF;
+}
+.spa-shell-main .chat .list > div:hover {
+	cursor: pointer;
+}
+
 .spa-shell-main .chat .content {
 	margin-left: 240px;
 	background-color: #FFFFFF;

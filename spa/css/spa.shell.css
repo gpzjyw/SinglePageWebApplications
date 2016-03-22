@@ -16,6 +16,9 @@
 	flex-grow: 1;
 	background-color: #FFA500;
 }
+.spa-shell-head a:hover {
+	cursor: pointer;
+}
 .spa-shell-head .selected {
 	background-color: #EEEEEE;
 }

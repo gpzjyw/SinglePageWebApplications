@@ -22,15 +22,10 @@ spa.shell = (function () {
 				+ '<a class="third"><h2>Tab3</h2></a>'
 				+ '<a class="fourth"><h2>Tab4</h2></a>'
 			+ '</div>'
-			+ '<div class="spa-shell-main">'
-				+ '<div class="chat">'
-					+ '<div class="list"></div>'
-					+ '<div class="content"></div>'
-				+ '</div>'
-			+ '</div>'
+			+ '<div class="spa-shell-main"></div>'
 			+ '<div class="spa-shell-foot"></div>'
 		},
-		stateMap = { 
+		stateMap = {
 			$container : null,
 			selectedItem : 1
 		},
@@ -99,7 +94,7 @@ spa.shell = (function () {
 				removeSelected();
 				jqueryMap.$first.addClass('selected');
 				stateMap.selectedItem = 1;
-				spa.chat.initModule($main);
+				spa.chat.initModule(jqueryMap.$main, spa.model.getPeopleList());
 				break;
 			case '#2':
 				removeSelected();

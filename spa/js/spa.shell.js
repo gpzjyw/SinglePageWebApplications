@@ -100,6 +100,7 @@ spa.shell = (function () {
 				removeSelected();
 				jqueryMap.$second.addClass('selected');
 				stateMap.selectedItem = 2;
+				spa.browser.initModule( jqueryMap.$main );
 				break;
 			case '#3':
 				removeSelected();

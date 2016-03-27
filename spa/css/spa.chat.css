@@ -21,6 +21,9 @@
 	line-height: 48px;
 	background-color: #D1DFDF;
 }
+.spa-shell-main .chat .list .selected {
+	background-color: #2BE777;
+}
 .spa-shell-main .chat .list > div:hover {
 	cursor: pointer;
 }

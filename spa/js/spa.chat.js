@@ -1,6 +1,6 @@
 /*
  * spa.chat.js
- * 生成聊天对话框
+ * 生成聊天列表和聊天内容
  */
 
 /*jslint         browser : true, continue : true,
@@ -23,13 +23,14 @@ spa.chat = (function () {
 		},
 		stateMap = {
 			$container : null,
-			people : null
+			people : null,
+			selectedItem : null
 		},
 		jqueryMap = {},
-		
-		setJqueryMap, createChat, updateContent,
+
+		setJqueryMap, createChat, updateList, updateContent,
 		onClickProxy,
-		initModule;
+		initModule, removeModule;
 	//----------------- END MODULE SCOPE VARIABLES ---------------
 
 	//------------------- BEGIN UTILITY METHODS ------------------
@@ -51,9 +52,14 @@ spa.chat = (function () {
 			length = people.length;
 		for (var i=0; i<length; i++) {
 			jqueryMap.$list.append('<div class=' + people[i]['id'] + '>' 
-					+ people[i]['name'] 
+					+ people[i]['name']
 					+ '</div>');
 		}
+	};
+	//更新list中的内容
+	updateList = function ( indexClass ) {
+		jqueryMap.$list.find('.selected').removeClass('selected');
+		jqueryMap.$list.find('.' + indexClass ).addClass('selected');
 	};
 	//更新content中的内容
 	updateContent = function ( index ) {
@@ -62,13 +68,19 @@ spa.chat = (function () {
 		}
 	};
 	//---------------------- END DOM METHODS ---------------------
-
+	
 	//------------------- BEGIN EVENT HANDLERS -------------------
 	//为左侧聊天list区域创建事件代理，当点击不同div时，更新右侧content内容
 	onClickProxy = function ( event ) {
 		var target = event.target,
-			index = target.className;
+			index = target.className.slice(0, 3);
 		
+		if ( index == stateMap.selectedItem ) {
+			return;
+		}
+		
+		stateMap.selectedItem = index;
+		updateList( index );
 		updateContent( +index - 1 );
 	};
 	//-------------------- END EVENT HANDLERS --------------------
@@ -84,12 +96,15 @@ spa.chat = (function () {
 		
 		jqueryMap.$list.click( onClickProxy );
 	};
+	removeModule = function () {
+		
+	};
 	//------------------- END PUBLIC METHODS ---------------------
 
 
 	//------------------- RETURN PUBLIC METHODS ------------------
 	return {
-		initModule : initModule
-	}
-	
+		initModule   : initModule,
+		removeModule : removeModule
+	};
 }());

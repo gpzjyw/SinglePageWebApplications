@@ -1,0 +1,32 @@
+/* browser模块内的样式 */
+.spa-shell-main .browser {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	bottom: 20px;
+	right: 20px;
+}
+.spa-shell-main .browser .form {
+	width: 100%;
+	height: 36px;
+}
+.spa-shell-main .browser .form .address {
+	width: 100%;
+	height: 36px;
+}
+.spa-shell-main .browser .form .submit {
+	display: none;
+}
+.spa-shell-main .browser .iframe-container {
+	position: absolute;
+	width: 100%;
+	top: 50px;
+	bottom: 0px;
+	border: 0px;
+}
+.spa-shell-main .browser .iframe-container .iframe {
+	width: 100%;
+	height: 100%;
+	border: 0px;
+	background-color: #FFFFFF;
+}

@@ -4,7 +4,8 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
-	min-width: 400px;
+	min-width: 500px;
+	min-height: 500px;
 }
 /* head部分 */
 .spa-shell-head {
